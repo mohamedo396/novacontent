@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Douf Nin — Contenu réseaux sociaux pour cafés & restaurants</title>
-<meta name="description" content="Packs de contenu prêts à publier pour cafés et restaurants au Maroc. 7 jours de contenu, livré en 48h.">
+<title data-i18n="meta.title">Douf Nin — Contenu réseaux sociaux pour cafés & restaurants</title>
+<meta name="description" content="Packs de contenu prêts à publier pour cafés et restaurants au Maroc." data-i18n-attr="content:meta.description">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;700&family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -20,15 +20,27 @@
     <a href="#top" class="logo">Douf&nbsp;Nin</a>
 
     <nav class="main-nav" id="mainNav">
-      <a href="#top" data-nav>Home</a>
-      <a href="#work" data-nav>Work</a>
-      <a href="#services" data-nav>Services</a>
-      <a href="#process" data-nav>Process</a>
-      <a href="#pricing" data-nav>Pricing</a>
-      <a href="#about" data-nav>About</a>
-      <a href="#faq" data-nav>FAQ</a>
-      <a href="#contact" data-nav class="nav-cta">Contact</a>
+      <a href="#top" data-nav data-i18n="nav.home">Home</a>
+      <a href="#work" data-nav data-i18n="nav.work">Work</a>
+      <a href="#services" data-nav data-i18n="nav.services">Services</a>
+      <a href="#process" data-nav data-i18n="nav.process">Process</a>
+      <a href="#pricing" data-nav data-i18n="nav.pricing">Pricing</a>
+      <a href="#about" data-nav data-i18n="nav.about">About</a>
+      <a href="#faq" data-nav data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" data-nav class="nav-cta" data-i18n="nav.contact">Contact</a>
+
+      <div class="lang-switch" id="langSwitchMobile" role="group" aria-label="Language">
+        <button type="button" data-lang="fr">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
     </nav>
+
+    <div class="lang-switch lang-switch-desktop" id="langSwitchDesktop" role="group" aria-label="Language">
+      <button type="button" data-lang="fr">FR</button>
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="ar">AR</button>
+    </div>
 
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -40,18 +52,18 @@
 <section class="hero" id="hero">
   <div class="hero-grid">
     <div class="hero-copy reveal">
-      <p class="eyebrow">Contenu réseaux sociaux</p>
-      <h1 class="hero-headline">Un contenu qui donne<br><em>envie de venir.</em></h1>
-      <p class="hero-sub">Contenu Instagram & Facebook prêt à publier, pour cafés et restaurants.</p>
-      <p class="hero-desc">Je transforme vos photos, produits et offres existants en contenu professionnel — conçu, rédigé et prêt à publier.</p>
+      <p class="eyebrow" data-i18n="hero.eyebrow">Contenu réseaux sociaux</p>
+      <h1 class="hero-headline" data-i18n="hero.headline">Un contenu qui donne<br><em>envie de venir.</em></h1>
+      <p class="hero-sub" data-i18n="hero.sub">Contenu Instagram & Facebook prêt à publier, pour cafés et restaurants.</p>
+      <p class="hero-desc" data-i18n="hero.desc">Je transforme vos photos, produits et offres existants en contenu professionnel — conçu, rédigé et prêt à publier.</p>
 
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Recevoir mon pack</a>
-        <a href="#work" class="btn btn-ghost">Voir des exemples</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Recevoir mon pack</a>
+        <a href="#work" class="btn btn-ghost" data-i18n="hero.ctaGhost">Voir des exemples</a>
       </div>
 
       <div class="hero-price">
-        <span class="hero-price-label">Pack 7 jours</span>
+        <span class="hero-price-label" data-i18n="hero.priceLabel">Pack 7 jours</span>
         <span class="hero-price-value">399&nbsp;DH</span>
       </div>
     </div>
@@ -72,7 +84,7 @@
         <div class="ig-mock-actions">
           <span>♡</span><span>◔</span><span>➤</span>
         </div>
-        <div class="ig-mock-caption"><b>noor.cafe</b> Un petit break n'a jamais fait de mal. ☕</div>
+        <div class="ig-mock-caption"><b>noor.cafe</b> <span data-i18n="hero.igCaption">Un petit break n'a jamais fait de mal. ☕</span></div>
       </div>
     </div>
   </div>
@@ -81,29 +93,28 @@
 <!-- ============ 2. THE PROBLEM ============ -->
 <section class="problem" id="problem">
   <div class="container">
-    <p class="eyebrow center reveal">Le constat</p>
-    <h2 class="section-title center reveal">Votre cuisine mérite<br>un meilleur contenu.</h2>
-    <p class="section-lead center reveal">Vous avez déjà les plats, l'ambiance et les clients. Ce qui manque, c'est le temps pour créer, régulièrement, un contenu qui donne envie de venir.</p>
+    <p class="eyebrow center reveal" data-i18n="problem.eyebrow">Le constat</p>
+    <h2 class="section-title center reveal" data-i18n="problem.title">Votre cuisine mérite<br>un meilleur contenu.</h2>
+    <p class="section-lead center reveal" data-i18n="problem.lead">Vous avez déjà les plats, l'ambiance et les clients.</p>
 
     <div class="problem-grid">
       <div class="problem-card reveal">
-        <span class="problem-index">Pas de temps</span>
-        <p class="problem-quote">« Qu'est-ce qu'on poste aujourd'hui ? »</p>
+        <span class="problem-index" data-i18n="problem.card1Title">Pas de temps</span>
+        <p class="problem-quote" data-i18n="problem.card1Quote">« Qu'est-ce qu'on poste aujourd'hui ? »</p>
       </div>
       <div class="problem-card reveal">
-        <span class="problem-index">Contenu irrégulier</span>
-        <p class="problem-quote">« De belles photos, mais aucune régularité. »</p>
+        <span class="problem-index" data-i18n="problem.card2Title">Contenu irrégulier</span>
+        <p class="problem-quote" data-i18n="problem.card2Quote">« De belles photos, mais aucune régularité. »</p>
       </div>
       <div class="problem-card reveal">
-        <span class="problem-index">Occasions manquées</span>
-        <p class="problem-quote">« Les promotions et nouveautés ne sont pas mises en valeur. »</p>
+        <span class="problem-index" data-i18n="problem.card3Title">Occasions manquées</span>
+        <p class="problem-quote" data-i18n="problem.card3Quote">« Les promotions et nouveautés ne sont pas mises en valeur. »</p>
       </div>
     </div>
 
     <div class="solution reveal">
-      <p class="eyebrow">Ma solution</p>
-      <p class="solution-text">Je transforme vos photos, produits et offres existants en contenu prêt à publier.<br>
-      Pas de stratégie marketing compliquée. Pas d'engagement long terme. Juste du contenu utilisable immédiatement.</p>
+      <p class="eyebrow" data-i18n="problem.solutionEyebrow">Ma solution</p>
+      <p class="solution-text" data-i18n="problem.solutionText">Je transforme vos photos, produits et offres existants en contenu prêt à publier.</p>
     </div>
   </div>
 </section>
@@ -111,38 +122,38 @@
 <!-- ============ 3. WHAT I CREATE ============ -->
 <section class="creations" id="services">
   <div class="container">
-    <p class="eyebrow center reveal">Exemples de concepts</p>
-    <h2 class="section-title center reveal">Une semaine de contenu.<br>Prête à l'emploi.</h2>
+    <p class="eyebrow center reveal" data-i18n="creations.eyebrow">Exemples de concepts</p>
+    <h2 class="section-title center reveal" data-i18n="creations.title">Une semaine de contenu.<br>Prête à l'emploi.</h2>
 
     <div class="creations-grid">
       <article class="creation-card reveal">
         <div class="creation-photo">
           <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=700&q=80" alt="Pâtisserie et café présentés élégamment" data-replaceable>
-          <span class="creation-tag">Concept démo</span>
+          <span class="creation-tag" data-i18n="creations.tag">Concept démo</span>
         </div>
-        <h3>Mise en avant produit</h3>
-        <p class="creation-example">« Un petit break n'a jamais fait de mal. »</p>
-        <p class="creation-desc">Mettez vos meilleurs produits en valeur avec des visuels épurés qui arrêtent le scroll.</p>
+        <h3 data-i18n="creations.card1Title">Mise en avant produit</h3>
+        <p class="creation-example" data-i18n="creations.card1Example">« Un petit break n'a jamais fait de mal. »</p>
+        <p class="creation-desc" data-i18n="creations.card1Desc">Mettez vos meilleurs produits en valeur avec des visuels épurés qui arrêtent le scroll.</p>
       </article>
 
       <article class="creation-card reveal">
         <div class="creation-photo">
           <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80" alt="Café et dessert en promotion" data-replaceable>
-          <span class="creation-tag">Concept démo</span>
+          <span class="creation-tag" data-i18n="creations.tag">Concept démo</span>
         </div>
-        <h3>Contenu promotionnel</h3>
-        <p class="creation-example">« Café + Dessert — 39 DH.<br>Votre pause de l'après-midi. »</p>
-        <p class="creation-desc">Transformez vos offres en contenu clair, compris instantanément par vos clients.</p>
+        <h3 data-i18n="creations.card2Title">Contenu promotionnel</h3>
+        <p class="creation-example" data-i18n="creations.card2Example">« Café + Dessert — 39 DH.<br>Votre pause de l'après-midi. »</p>
+        <p class="creation-desc" data-i18n="creations.card2Desc">Transformez vos offres en contenu clair, compris instantanément par vos clients.</p>
       </article>
 
       <article class="creation-card reveal">
         <div class="creation-photo">
           <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=700&q=80" alt="Intérieur chaleureux d'un restaurant" data-replaceable>
-          <span class="creation-tag">Concept démo</span>
+          <span class="creation-tag" data-i18n="creations.tag">Concept démo</span>
         </div>
-        <h3>Marque & lifestyle</h3>
-        <p class="creation-example">« Bonne nourriture.<br>Bonnes personnes.<br>Bons moments. »</p>
-        <p class="creation-desc">Construisez une identité visuelle qui reste dans la mémoire de vos clients.</p>
+        <h3 data-i18n="creations.card3Title">Marque & lifestyle</h3>
+        <p class="creation-example" data-i18n="creations.card3Example">« Bonne nourriture.<br>Bonnes personnes.<br>Bons moments. »</p>
+        <p class="creation-desc" data-i18n="creations.card3Desc">Construisez une identité visuelle qui reste dans la mémoire de vos clients.</p>
       </article>
     </div>
   </div>
@@ -151,33 +162,33 @@
 <!-- ============ 4. SAMPLE CONTENT ============ -->
 <section class="feed" id="work">
   <div class="container">
-    <p class="eyebrow center reveal">Concepts démo — créés pour illustrer un style de contenu possible</p>
-    <h2 class="section-title center reveal">Votre feed pourrait<br>ressembler à ça.</h2>
+    <p class="eyebrow center reveal" data-i18n="feed.eyebrow">Concepts démo</p>
+    <h2 class="section-title center reveal" data-i18n="feed.title">Votre feed pourrait<br>ressembler à ça.</h2>
 
     <div class="feed-grid">
       <div class="feed-item reveal">
         <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Café et viennoiserie — concept démo" data-replaceable>
-        <div class="feed-overlay"><span>Noor Café</span><em>Concept démo</em></div>
+        <div class="feed-overlay"><span>Noor Café</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
       <div class="feed-item reveal">
         <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Plat de restaurant — concept démo" data-replaceable>
-        <div class="feed-overlay"><span>Dar Zitoun</span><em>Concept démo</em></div>
+        <div class="feed-overlay"><span>Dar Zitoun</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
       <div class="feed-item reveal">
         <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=600&q=80" alt="Offre spéciale — concept démo" data-replaceable>
-        <div class="feed-overlay"><span>Braise & Co.</span><em>Concept démo</em></div>
+        <div class="feed-overlay"><span>Braise & Co.</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
       <div class="feed-item reveal">
         <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=600&q=80" alt="Intérieur et ambiance — concept démo" data-replaceable>
-        <div class="feed-overlay"><span>Noor Café</span><em>Concept démo</em></div>
+        <div class="feed-overlay"><span>Noor Café</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
       <div class="feed-item reveal">
         <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80" alt="Nouveauté au menu — concept démo" data-replaceable>
-        <div class="feed-overlay"><span>Dar Zitoun</span><em>Concept démo</em></div>
+        <div class="feed-overlay"><span>Dar Zitoun</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
       <div class="feed-item reveal">
         <img src="https://images.unsplash.com/photo-1494314675889-92104b17f2b2?auto=format&fit=crop&w=600&q=80" alt="Promotion du week-end — concept démo" data-replaceable>
-        <div class="feed-overlay"><span>Braise & Co.</span><em>Concept démo</em></div>
+        <div class="feed-overlay"><span>Braise & Co.</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
     </div>
   </div>
@@ -186,83 +197,83 @@
 <!-- ============ 5. STORIES ============ -->
 <section class="stories" id="stories">
   <div class="container">
-    <p class="eyebrow center reveal">Instagram Stories</p>
-    <h2 class="section-title center reveal">Le contenu ne s'arrête<br>pas au feed.</h2>
+    <p class="eyebrow center reveal" data-i18n="stories.eyebrow">Instagram Stories</p>
+    <h2 class="section-title center reveal" data-i18n="stories.title">Le contenu ne s'arrête<br>pas au feed.</h2>
 
     <div class="stories-grid">
       <div class="story-mock reveal">
         <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable>
         <div class="story-content">
-          <p class="story-label">Spécial du jour</p>
-          <p class="story-main">Panini Poulet<br>+ Frites<br>49 DH</p>
-          <span class="story-cta">Commander →</span>
+          <p class="story-label" data-i18n="stories.s1Label">Spécial du jour</p>
+          <p class="story-main" data-i18n="stories.s1Main">Panini Poulet<br>+ Frites<br>49 DH</p>
+          <span class="story-cta" data-i18n="stories.s1Cta">Commander →</span>
         </div>
       </div>
 
       <div class="story-mock reveal">
         <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable>
         <div class="story-content">
-          <p class="story-label">Vous prenez quoi aujourd'hui ?</p>
-          <p class="story-main">Café<br>Croissant<br>Gâteau</p>
+          <p class="story-label" data-i18n="stories.s2Label">Vous prenez quoi aujourd'hui ?</p>
+          <p class="story-main" data-i18n="stories.s2Main">Café<br>Croissant<br>Gâteau</p>
         </div>
       </div>
 
       <div class="story-mock reveal">
         <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable>
         <div class="story-content">
-          <p class="story-label">Nouveau au menu</p>
-          <p class="story-main">Vous l'avez déjà essayé ?</p>
-          <span class="story-cta">Envoyez-nous un DM</span>
+          <p class="story-label" data-i18n="stories.s3Label">Nouveau au menu</p>
+          <p class="story-main" data-i18n="stories.s3Main">Vous l'avez déjà essayé ?</p>
+          <span class="story-cta" data-i18n="stories.s3Cta">Envoyez-nous un DM</span>
         </div>
       </div>
 
       <div class="story-mock reveal">
         <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable>
         <div class="story-content">
-          <p class="story-label">Prévu pour le week-end ?</p>
-          <p class="story-main">Bonne nourriture.<br>Bon café.<br>Bonne compagnie.</p>
-          <span class="story-cta">Passez ce week-end</span>
+          <p class="story-label" data-i18n="stories.s4Label">Prévu pour le week-end ?</p>
+          <p class="story-main" data-i18n="stories.s4Main">Bonne nourriture.<br>Bon café.<br>Bonne compagnie.</p>
+          <span class="story-cta" data-i18n="stories.s4Cta">Passez ce week-end</span>
         </div>
       </div>
     </div>
 
-    <p class="stories-note reveal">Des Stories pensées pour susciter l'interaction, les visites et les commandes.</p>
+    <p class="stories-note reveal" data-i18n="stories.note">Des Stories pensées pour susciter l'interaction, les visites et les commandes.</p>
   </div>
 </section>
 
 <!-- ============ 6. HOW IT WORKS ============ -->
 <section class="process" id="process">
   <div class="container">
-    <p class="eyebrow center reveal">Comment ça marche</p>
-    <h2 class="section-title center reveal">Simple, du début à la fin.</h2>
+    <p class="eyebrow center reveal" data-i18n="process.eyebrow">Comment ça marche</p>
+    <h2 class="section-title center reveal" data-i18n="process.title">Simple, du début à la fin.</h2>
 
     <div class="process-list">
       <div class="process-step reveal">
         <span class="process-num">01</span>
         <div>
-          <h3>Envoyez vos éléments</h3>
-          <p>Logo, photos, produits/services, prix et offres en cours.</p>
+          <h3 data-i18n="process.step1Title">Envoyez vos éléments</h3>
+          <p data-i18n="process.step1Desc">Logo, photos, produits/services, prix et offres en cours.</p>
         </div>
       </div>
       <div class="process-step reveal">
         <span class="process-num">02</span>
         <div>
-          <h3>Je crée le contenu</h3>
-          <p>Je conçois vos posts, vos Stories et rédige les légendes.</p>
+          <h3 data-i18n="process.step2Title">Je crée le contenu</h3>
+          <p data-i18n="process.step2Desc">Je conçois vos posts, vos Stories et rédige les légendes.</p>
         </div>
       </div>
       <div class="process-step reveal">
         <span class="process-num">03</span>
         <div>
-          <h3>Vous vérifiez</h3>
-          <p>Vous validez le contenu et demandez des ajustements raisonnables.</p>
+          <h3 data-i18n="process.step3Title">Vous vérifiez</h3>
+          <p data-i18n="process.step3Desc">Vous validez le contenu et demandez des ajustements raisonnables.</p>
         </div>
       </div>
       <div class="process-step reveal">
         <span class="process-num">04</span>
         <div>
-          <h3>Vous recevez tout, prêt à publier</h3>
-          <p>Fichiers organisés, livrés sous 48 heures.</p>
+          <h3 data-i18n="process.step4Title">Vous recevez tout, prêt à publier</h3>
+          <p data-i18n="process.step4Desc">Fichiers organisés, livrés sous 48 heures.</p>
         </div>
       </div>
     </div>
@@ -272,29 +283,29 @@
 <!-- ============ 7. PRICING ============ -->
 <section class="pricing" id="pricing">
   <div class="container">
-    <p class="eyebrow center reveal">L'offre</p>
-    <h2 class="section-title center reveal">Votre semaine de contenu,<br>prête à publier.</h2>
+    <p class="eyebrow center reveal" data-i18n="pricing.eyebrow">L'offre</p>
+    <h2 class="section-title center reveal" data-i18n="pricing.title">Votre semaine de contenu,<br>prête à publier.</h2>
 
     <div class="pricing-card reveal">
       <div class="pricing-head">
-        <p class="pricing-name">Pack 7 jours</p>
+        <p class="pricing-name" data-i18n="pricing.name">Pack 7 jours</p>
         <p class="pricing-price">399&nbsp;DH</p>
-        <p class="pricing-note">Prix de lancement</p>
+        <p class="pricing-note" data-i18n="pricing.note">Prix de lancement</p>
       </div>
 
       <ul class="pricing-list">
-        <li>7 posts réseaux sociaux</li>
-        <li>7 Stories Instagram</li>
-        <li>7 légendes</li>
-        <li>1 visuel de campagne promotionnelle</li>
-        <li>Contenu en arabe / français / anglais</li>
-        <li>Fichiers prêts à publier</li>
-        <li>Livraison en 48 heures</li>
+        <li data-i18n="pricing.item1">7 posts réseaux sociaux</li>
+        <li data-i18n="pricing.item2">7 Stories Instagram</li>
+        <li data-i18n="pricing.item3">7 légendes</li>
+        <li data-i18n="pricing.item4">1 visuel de campagne promotionnelle</li>
+        <li data-i18n="pricing.item5">Contenu en arabe / français / anglais</li>
+        <li data-i18n="pricing.item6">Fichiers prêts à publier</li>
+        <li data-i18n="pricing.item7">Livraison en 48 heures</li>
       </ul>
 
-      <p class="pricing-small">Aucun engagement long terme. Aucun budget publicitaire requis.</p>
+      <p class="pricing-small" data-i18n="pricing.small">Aucun engagement long terme. Aucun budget publicitaire requis.</p>
 
-      <a href="#contact" class="btn btn-primary btn-block">Commencer</a>
+      <a href="#contact" class="btn btn-primary btn-block" data-i18n="pricing.cta">Commencer</a>
     </div>
   </div>
 </section>
@@ -303,13 +314,13 @@
 <section class="about" id="about">
   <div class="container about-grid">
     <div class="about-photo reveal">
-      <span data-replaceable>Votre photo</span>
+      <span data-replaceable data-i18n="about.photoLabel">Votre photo</span>
     </div>
     <div class="about-copy reveal">
-      <p class="eyebrow">À propos</p>
-      <h2 class="section-title">Bonjour, je suis Douf.</h2>
-      <p class="about-text">J'aide les cafés et restaurants à transformer leurs photos, produits et offres existants en contenu professionnel, prêt à publier sur les réseaux sociaux.</p>
-      <p class="about-text">Mon objectif est simple : faire en sorte que votre établissement soit bien représenté en ligne, sans compliquer le contenu.</p>
+      <p class="eyebrow" data-i18n="about.eyebrow">À propos</p>
+      <h2 class="section-title" data-i18n="about.title">Bonjour, je suis Douf.</h2>
+      <p class="about-text" data-i18n="about.text1">J'aide les cafés et restaurants...</p>
+      <p class="about-text" data-i18n="about.text2">Mon objectif est simple...</p>
     </div>
   </div>
 </section>
@@ -317,33 +328,33 @@
 <!-- ============ 9. FAQ ============ -->
 <section class="faq" id="faq">
   <div class="container">
-    <p class="eyebrow center reveal">Questions fréquentes</p>
-    <h2 class="section-title center reveal">FAQ</h2>
+    <p class="eyebrow center reveal" data-i18n="faq.eyebrow">Questions fréquentes</p>
+    <h2 class="section-title center reveal" data-i18n="faq.title">FAQ</h2>
 
     <div class="faq-list">
       <details class="faq-item reveal">
-        <summary>Dois-je fournir des photos professionnelles ?</summary>
-        <p>Non. Vous pouvez envoyer les photos que vous avez déjà. Je travaille avec le matériel disponible et je l'organise dans un style visuel cohérent.</p>
+        <summary data-i18n="faq.q1">Dois-je fournir des photos professionnelles ?</summary>
+        <p data-i18n="faq.a1">Non. Vous pouvez envoyer les photos que vous avez déjà.</p>
       </details>
       <details class="faq-item reveal">
-        <summary>Gérez-vous mon compte Instagram ?</summary>
-        <p>Non. Je crée le contenu. Vous recevez les posts, Stories et légendes finalisés, prêts à publier.</p>
+        <summary data-i18n="faq.q2">Gérez-vous mon compte Instagram ?</summary>
+        <p data-i18n="faq.a2">Non. Je crée le contenu.</p>
       </details>
       <details class="faq-item reveal">
-        <summary>Le contenu peut-il être en arabe ou en français ?</summary>
-        <p>Oui. Le contenu peut être créé en arabe, en français, en anglais, ou une combinaison selon votre audience.</p>
+        <summary data-i18n="faq.q3">Le contenu peut-il être en arabe ou en français ?</summary>
+        <p data-i18n="faq.a3">Oui. Le contenu peut être créé en arabe, en français, en anglais.</p>
       </details>
       <details class="faq-item reveal">
-        <summary>Quel est le délai de livraison ?</summary>
-        <p>Le délai standard est de 48 heures après réception des éléments nécessaires.</p>
+        <summary data-i18n="faq.q4">Quel est le délai de livraison ?</summary>
+        <p data-i18n="faq.a4">Le délai standard est de 48 heures.</p>
       </details>
       <details class="faq-item reveal">
-        <summary>Puis-je demander des modifications ?</summary>
-        <p>Oui. Des ajustements raisonnables sont inclus pour que le contenu final corresponde à votre établissement.</p>
+        <summary data-i18n="faq.q5">Puis-je demander des modifications ?</summary>
+        <p data-i18n="faq.a5">Oui. Des ajustements raisonnables sont inclus.</p>
       </details>
       <details class="faq-item reveal">
-        <summary>Dois-je signer un contrat mensuel ?</summary>
-        <p>Non. Le pack est conçu comme un service simple, sur une semaine.</p>
+        <summary data-i18n="faq.q6">Dois-je signer un contrat mensuel ?</summary>
+        <p data-i18n="faq.a6">Non. Le pack est conçu comme un service simple.</p>
       </details>
     </div>
   </div>
@@ -352,15 +363,17 @@
 <!-- ============ 10. FINAL CTA ============ -->
 <section class="final-cta" id="contact">
   <div class="container">
-    <h2 class="section-title center reveal">Prêt pour une meilleure<br>semaine de contenu ?</h2>
-    <p class="section-lead center reveal">Envoyez-moi votre page Instagram et quelques photos de votre établissement.<br>Je vous montrerai à quoi votre contenu pourrait ressembler.</p>
+    <h2 class="section-title center reveal" data-i18n="finalCta.title">Prêt pour une meilleure<br>semaine de contenu ?</h2>
+    <p class="section-lead center reveal" data-i18n="finalCta.lead">Envoyez-moi votre page Instagram et quelques photos.</p>
 
     <div class="final-actions reveal">
-      <a href="https://wa.me/212XXXXXXXXX" class="btn btn-primary" target="_blank" rel="noopener" data-replaceable>WhatsApp</a>
-      <a href="https://instagram.com/YOUR_INSTAGRAM" class="btn btn-ghost" target="_blank" rel="noopener" data-replaceable>Instagram</a>
+      <a href="https://wa.me/212XXXXXXXXX" class="btn btn-primary" target="_blank" rel="noopener" data-replaceable data-i18n="finalCta.whatsapp">WhatsApp</a>
+      <a href="https://instagram.com/YOUR_INSTAGRAM" class="btn btn-ghost" target="_blank" rel="noopener" data-replaceable data-i18n="finalCta.instagram">Instagram</a>
     </div>
 
-    <p class="final-price reveal">Pack 7 jours — 399&nbsp;DH</p>
+    <p class="final-price reveal">
+      <span data-i18n="hero.priceLabel">Pack 7 jours</span> — 399&nbsp;DH
+    </p>
   </div>
 </section>
 
@@ -369,25 +382,26 @@
   <div class="container footer-grid">
     <div>
       <p class="footer-name">Douf Nin</p>
-      <p class="footer-tag">Contenu réseaux sociaux</p>
-      <p class="footer-cats">Cafés • Restaurants • Commerces alimentaires</p>
+      <p class="footer-tag" data-i18n="footer.tag">Contenu réseaux sociaux</p>
+      <p class="footer-cats" data-i18n="footer.cats">Cafés • Restaurants • Commerces alimentaires</p>
     </div>
     <div class="footer-contact">
-      <p><span>WhatsApp</span><a href="https://wa.me/212XXXXXXXXX" data-replaceable>+212 XX XX XX XX</a></p>
-      <p><span>Instagram</span><a href="https://instagram.com/YOUR_INSTAGRAM" data-replaceable>@your_instagram</a></p>
-      <p><span>Email</span><a href="mailto:youremail@example.com" data-replaceable>youremail@example.com</a></p>
+      <p><span data-i18n="footer.whatsappLabel">WhatsApp</span><a href="https://wa.me/212XXXXXXXXX" data-replaceable>+212 XX XX XX XX</a></p>
+      <p><span data-i18n="footer.instagramLabel">Instagram</span><a href="https://instagram.com/YOUR_INSTAGRAM" data-replaceable>@your_instagram</a></p>
+      <p><span data-i18n="footer.emailLabel">Email</span><a href="mailto:youremail@example.com" data-replaceable>youremail@example.com</a></p>
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>© 2026 Douf Nin. Tous droits réservés.</p>
+    <p data-i18n="footer.copyright">© 2026 Douf Nin. Tous droits réservés.</p>
   </div>
 </footer>
 
 <!-- ============ FLOATING WHATSAPP ============ -->
-<a href="https://wa.me/212XXXXXXXXX" class="wa-float" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp" data-replaceable>
+<a href="https://wa.me/212XXXXXXXXX" class="wa-float" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp" data-replaceable data-i18n-attr="aria-label:wa.ariaLabel">
   <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.31.66 4.47 1.8 6.31L4 29l7.86-1.75A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm0 21.8c-1.93 0-3.73-.55-5.26-1.5l-.376-.23-4.66 1.04 1.03-4.54-.246-.39A9.77 9.77 0 0 1 5.2 15c0-5.96 4.84-10.8 10.8-10.8S26.8 9.04 26.8 15 21.96 24.8 16 24.8zm5.86-8.1c-.32-.16-1.9-.94-2.2-1.05-.29-.11-.51-.16-.72.16-.21.32-.83 1.05-1.02 1.26-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.6-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.53-.54-.72-.55h-.62c-.21 0-.56.08-.85.4-.29.32-1.12 1.1-1.12 2.67s1.15 3.1 1.31 3.31c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.82.67.77.24 1.46.21 2.02.13.62-.09 1.9-.78 2.16-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37z"/></svg>
 </a>
 
+<script src="translations.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

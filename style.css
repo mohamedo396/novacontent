@@ -17,6 +17,17 @@
   --ease:cubic-bezier(.4,0,.2,1);
 }
 
+/* Arabic typography — swapped in via JS on <html> when Arabic is active.
+   Amiri (elegant Naskh serif) pairs with Cairo (clean, modern Arabic sans)
+   to preserve the same editorial hierarchy as the Latin type pairing. */
+html.lang-ar{
+  --font-display:'Amiri', serif;
+  --font-body:'Cairo', sans-serif;
+}
+html.lang-ar .hero-headline em{font-style:normal;}
+html.lang-ar .creation-example,
+html.lang-ar .problem-quote{font-style:normal;}
+
 *,*::before,*::after{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
@@ -39,6 +50,19 @@ h1,h2,h3{font-family:var(--font-display);font-weight:500;color:var(--brown);marg
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}
   *{animation-duration:.01ms !important;transition-duration:.01ms !important;}
+}
+
+/* ===================================================
+   RTL support
+   `direction` is inherited, so setting it once on <html>
+   (done in script.js) auto-mirrors flex/grid ordering,
+   text alignment (initial value is logical `start`), and
+   most spacing. Only a few explicitly-positioned pieces
+   need manual overrides below.
+=================================================== */
+[dir="rtl"] .ig-mock{ left:auto; right:-56px; }
+@media (max-width:900px){
+  [dir="rtl"] .ig-mock{ right:auto; left:14px; }
 }
 
 /* ===================================================
@@ -121,7 +145,7 @@ section{padding:110px 0;}
   padding:18px 32px;
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  gap:24px;
 }
 .logo{
   font-family:var(--font-display);
@@ -129,6 +153,7 @@ section{padding:110px 0;}
   font-weight:600;
   color:var(--brown);
   letter-spacing:.02em;
+  margin-inline-end:auto;
 }
 .main-nav{
   display:flex;
@@ -165,6 +190,36 @@ section{padding:110px 0;}
 }
 .nav-cta:hover{background:var(--brown);color:var(--cream);}
 
+/* ---------- Language switch ---------- */
+.lang-switch{
+  display:flex;
+  align-items:center;
+  border:1px solid rgba(74,51,45,.28);
+  border-radius:20px;
+  padding:3px;
+  gap:2px;
+}
+.lang-switch button{
+  border:none;
+  background:none;
+  cursor:pointer;
+  font-family:var(--font-body);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.04em;
+  color:var(--brown);
+  padding:6px 12px;
+  border-radius:16px;
+  transition:background .25s var(--ease), color .25s var(--ease);
+}
+.lang-switch button:hover{color:var(--rose);}
+.lang-switch button.active{
+  background:var(--brown);
+  color:var(--cream);
+}
+.lang-switch-desktop{margin-inline-start:8px;}
+#langSwitchMobile{display:none;}
+
 .nav-toggle{
   display:none;
   flex-direction:column;
@@ -199,6 +254,8 @@ section{padding:110px 0;}
   .main-nav.open{transform:translateY(0);}
   .nav-cta{align-self:flex-start;}
   .nav-toggle{display:flex;}
+  .lang-switch-desktop{display:none;}
+  #langSwitchMobile{display:flex;margin-top:6px;}
 }
 
 /* ===================================================
@@ -561,13 +618,13 @@ section{padding:110px 0;}
 }
 .pricing-list li{
   font-size:15px;
-  padding-left:26px;
+  padding-inline-start:26px;
   position:relative;
   color:var(--beige);
 }
 .pricing-list li::before{
   content:'✓';
-  position:absolute;left:0;top:0;
+  position:absolute;inset-inline-start:0;top:0;
   color:var(--rose);
   font-weight:700;
 }
