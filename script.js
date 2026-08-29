@@ -9,6 +9,21 @@
   var RTL_LANGUAGES = ['ar'];
   var DEFAULT_LANG = 'fr';
   var currentLang = DEFAULT_LANG;
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Graceful image fallback ----------
+     If a source image 404s (a common real-world risk when hot-linking
+     third-party photos), swap it for a themed placeholder instead of
+     showing a broken-image icon. Exposed on window so inline
+     onerror="" handlers in the HTML can reach it. */
+  window.__imgFallback = function (img) {
+    if (img.dataset.fallbackApplied) return; // avoid loops if the placeholder itself fails
+    img.dataset.fallbackApplied = 'true';
+    img.removeAttribute('srcset');
+    img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Crect width="100" height="100" fill="%23E8D8D2"/%3E%3Cpath d="M30 65l12-15 10 10 10-18 18 23z" fill="%23B98C7B" opacity="0.6"/%3E%3Ccircle cx="35" cy="35" r="7" fill="%23B98C7B" opacity="0.6"/%3E%3C/svg%3E';
+    img.classList.add('img-fallback');
+    img.alt = img.alt || '';
+  };
 
   /* ---------- Language detection (no persistence — in-memory only) ---------- */
   function detectInitialLang() {
@@ -121,6 +136,37 @@
       revealEls.forEach(function (el) { io.observe(el); });
     } else {
       revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+
+    /* ---------- FAQ accordion (single item open at a time) ---------- */
+    var faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function (item) {
+      item.addEventListener('toggle', function () {
+        if (item.open) {
+          faqItems.forEach(function (other) {
+            if (other !== item) other.open = false;
+          });
+        }
+      });
+    });
+
+    /* ---------- Hero photo tilt (desktop pointer only, respects reduced motion) ---------- */
+    var heroVisual = document.getElementById('heroVisual');
+    var heroPhoto = document.getElementById('heroPhoto');
+    var canHover = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+    if (heroVisual && heroPhoto && canHover && !prefersReducedMotion) {
+      heroVisual.addEventListener('mousemove', function (e) {
+        var rect = heroVisual.getBoundingClientRect();
+        var x = (e.clientX - rect.left) / rect.width - 0.5;
+        var y = (e.clientY - rect.top) / rect.height - 0.5;
+        var rotateY = x * 8;
+        var rotateX = y * -8;
+        heroPhoto.style.transform = 'rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)';
+      });
+      heroVisual.addEventListener('mouseleave', function () {
+        heroPhoto.style.transform = 'rotateX(0deg) rotateY(0deg)';
+      });
     }
 
     /* ---------- Active nav link on scroll ---------- */

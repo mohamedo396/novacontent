@@ -25,6 +25,7 @@ window.TRANSLATIONS = {
     "nav.faq": "FAQ",
     "nav.contact": "Contact",
     "nav.openMenu": "Ouvrir le menu",
+    "a11y.skipLink": "Aller au contenu",
 
     "hero.eyebrow": "Contenu réseaux sociaux",
     "hero.headline": "Un contenu qui donne<br><em>envie de venir.</em>",
@@ -137,7 +138,17 @@ window.TRANSLATIONS = {
     "footer.emailLabel": "Email",
     "footer.copyright": "© 2026 Douf Nin. Tous droits réservés.",
 
-    "wa.ariaLabel": "Contacter sur WhatsApp"
+    "wa.ariaLabel": "Contacter sur WhatsApp",
+    "wa.stickyCta": "Discuter sur WhatsApp",
+
+    "hero.badgeNumber": "48H",
+    "hero.badgeLabel": "Livraison",
+
+    "marquee.item1": "Cafés",
+    "marquee.item2": "Restaurants",
+    "marquee.item3": "Boulangeries",
+    "marquee.item4": "Pâtisseries",
+    "marquee.item5": "Commerces locaux"
   },
 
   en: {
@@ -153,6 +164,7 @@ window.TRANSLATIONS = {
     "nav.faq": "FAQ",
     "nav.contact": "Contact",
     "nav.openMenu": "Open menu",
+    "a11y.skipLink": "Skip to content",
 
     "hero.eyebrow": "Social media content",
     "hero.headline": "Content that makes<br><em>people want to visit.</em>",
@@ -265,7 +277,17 @@ window.TRANSLATIONS = {
     "footer.emailLabel": "Email",
     "footer.copyright": "© 2026 Douf Nin. All rights reserved.",
 
-    "wa.ariaLabel": "Contact on WhatsApp"
+    "wa.ariaLabel": "Contact on WhatsApp",
+    "wa.stickyCta": "Chat on WhatsApp",
+
+    "hero.badgeNumber": "48H",
+    "hero.badgeLabel": "Delivery",
+
+    "marquee.item1": "Cafés",
+    "marquee.item2": "Restaurants",
+    "marquee.item3": "Bakeries",
+    "marquee.item4": "Pastry shops",
+    "marquee.item5": "Local businesses"
   },
 
   ar: {
@@ -281,6 +303,7 @@ window.TRANSLATIONS = {
     "nav.faq": "الأسئلة الشائعة",
     "nav.contact": "تواصل",
     "nav.openMenu": "فتح القائمة",
+    "a11y.skipLink": "الانتقال إلى المحتوى",
 
     "hero.eyebrow": "محتوى وسائل التواصل الاجتماعي",
     "hero.headline": "محتوى يجعل الناس<br><em>يرغبون في الزيارة.</em>",
@@ -393,7 +416,17 @@ window.TRANSLATIONS = {
     "footer.emailLabel": "البريد الإلكتروني",
     "footer.copyright": "© 2026 دوف نين. جميع الحقوق محفوظة.",
 
-    "wa.ariaLabel": "تواصل عبر واتساب"
+    "wa.ariaLabel": "تواصل عبر واتساب",
+    "wa.stickyCta": "تواصل عبر واتساب",
+
+    "hero.badgeNumber": "48H",
+    "hero.badgeLabel": "التسليم",
+
+    "marquee.item1": "مقاهي",
+    "marquee.item2": "مطاعم",
+    "marquee.item3": "مخابز",
+    "marquee.item4": "محلات حلويات",
+    "marquee.item5": "مشاريع محلية"
   }
 
 };

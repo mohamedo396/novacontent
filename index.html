@@ -14,10 +14,12 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link" data-i18n="a11y.skipLink">Aller au contenu</a>
+
 <!-- ============ NAV ============ -->
 <header class="site-header" id="top">
   <div class="nav-wrap">
-    <a href="#top" class="logo">NOVA&nbsp;CONTENT</a>
+    <a href="#top" class="logo">Douf&nbsp;Nin</a>
 
     <nav class="main-nav" id="mainNav">
       <a href="#top" data-nav data-i18n="nav.home">Home</a>
@@ -48,6 +50,7 @@
   </div>
 </header>
 
+<main id="main">
 <!-- ============ 1. HERO ============ -->
 <section class="hero" id="hero">
   <div class="hero-grid">
@@ -68,9 +71,13 @@
       </div>
     </div>
 
-    <div class="hero-visual reveal">
-      <div class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80" alt="Café servi dans une tasse en céramique sur une table en bois" data-replaceable>
+    <div class="hero-visual reveal" id="heroVisual">
+      <div class="hero-photo" id="heroPhoto">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80" alt="Café servi dans une tasse en céramique sur une table en bois" data-replaceable loading="eager" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
+      </div>
+      <div class="hero-badge" aria-hidden="true">
+        <strong data-i18n="hero.badgeNumber">48H</strong>
+        <span data-i18n="hero.badgeLabel">Livraison</span>
       </div>
       <div class="ig-mock" aria-hidden="true">
         <div class="ig-mock-head">
@@ -79,7 +86,7 @@
           <span class="ig-mock-dots">•••</span>
         </div>
         <div class="ig-mock-photo">
-          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="" data-replaceable>
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="" data-replaceable loading="eager" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         </div>
         <div class="ig-mock-actions">
           <span>♡</span><span>◔</span><span>➤</span>
@@ -89,6 +96,22 @@
     </div>
   </div>
 </section>
+
+<!-- ============ MARQUEE — signature band ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span data-i18n="marquee.item1">Cafés</span>
+    <span data-i18n="marquee.item2">Restaurants</span>
+    <span data-i18n="marquee.item3">Boulangeries</span>
+    <span data-i18n="marquee.item4">Pâtisseries</span>
+    <span data-i18n="marquee.item5">Commerces locaux</span>
+    <span data-i18n="marquee.item1">Cafés</span>
+    <span data-i18n="marquee.item2">Restaurants</span>
+    <span data-i18n="marquee.item3">Boulangeries</span>
+    <span data-i18n="marquee.item4">Pâtisseries</span>
+    <span data-i18n="marquee.item5">Commerces locaux</span>
+  </div>
+</div>
 
 <!-- ============ 2. THE PROBLEM ============ -->
 <section class="problem" id="problem">
@@ -128,7 +151,7 @@
     <div class="creations-grid">
       <article class="creation-card reveal">
         <div class="creation-photo">
-          <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=700&q=80" alt="Pâtisserie et café présentés élégamment" data-replaceable>
+          <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&w=700&q=80" alt="Pâtisserie et café présentés élégamment" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
           <span class="creation-tag" data-i18n="creations.tag">Concept démo</span>
         </div>
         <h3 data-i18n="creations.card1Title">Mise en avant produit</h3>
@@ -138,7 +161,7 @@
 
       <article class="creation-card reveal">
         <div class="creation-photo">
-          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80" alt="Café et dessert en promotion" data-replaceable>
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80" alt="Café et dessert en promotion" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
           <span class="creation-tag" data-i18n="creations.tag">Concept démo</span>
         </div>
         <h3 data-i18n="creations.card2Title">Contenu promotionnel</h3>
@@ -148,7 +171,7 @@
 
       <article class="creation-card reveal">
         <div class="creation-photo">
-          <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=700&q=80" alt="Intérieur chaleureux d'un restaurant" data-replaceable>
+          <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=700&q=80" alt="Intérieur chaleureux d'un restaurant" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
           <span class="creation-tag" data-i18n="creations.tag">Concept démo</span>
         </div>
         <h3 data-i18n="creations.card3Title">Marque & lifestyle</h3>
@@ -167,27 +190,27 @@
 
     <div class="feed-grid">
       <div class="feed-item reveal">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Café et viennoiserie — concept démo" data-replaceable>
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Café et viennoiserie — concept démo" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         <div class="feed-overlay"><span>Noor Café</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
       <div class="feed-item reveal">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Plat de restaurant — concept démo" data-replaceable>
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Plat de restaurant — concept démo" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         <div class="feed-overlay"><span>Dar Zitoun</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
       <div class="feed-item reveal">
-        <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=600&q=80" alt="Offre spéciale — concept démo" data-replaceable>
+        <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=600&q=80" alt="Offre spéciale — concept démo" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         <div class="feed-overlay"><span>Braise & Co.</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
       <div class="feed-item reveal">
-        <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=600&q=80" alt="Intérieur et ambiance — concept démo" data-replaceable>
+        <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=600&q=80" alt="Intérieur et ambiance — concept démo" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         <div class="feed-overlay"><span>Noor Café</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
       <div class="feed-item reveal">
-        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80" alt="Nouveauté au menu — concept démo" data-replaceable>
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=600&q=80" alt="Nouveauté au menu — concept démo" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         <div class="feed-overlay"><span>Dar Zitoun</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
       <div class="feed-item reveal">
-        <img src="https://images.unsplash.com/photo-1494314675889-92104b17f2b2?auto=format&fit=crop&w=600&q=80" alt="Promotion du week-end — concept démo" data-replaceable>
+        <img src="https://images.unsplash.com/photo-1494314675889-92104b17f2b2?auto=format&fit=crop&w=600&q=80" alt="Promotion du week-end — concept démo" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         <div class="feed-overlay"><span>Braise & Co.</span><em data-i18n="feed.tag">Concept démo</em></div>
       </div>
     </div>
@@ -202,7 +225,7 @@
 
     <div class="stories-grid">
       <div class="story-mock reveal">
-        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable>
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         <div class="story-content">
           <p class="story-label" data-i18n="stories.s1Label">Spécial du jour</p>
           <p class="story-main" data-i18n="stories.s1Main">Panini Poulet<br>+ Frites<br>49 DH</p>
@@ -211,7 +234,7 @@
       </div>
 
       <div class="story-mock reveal">
-        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable>
+        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         <div class="story-content">
           <p class="story-label" data-i18n="stories.s2Label">Vous prenez quoi aujourd'hui ?</p>
           <p class="story-main" data-i18n="stories.s2Main">Café<br>Croissant<br>Gâteau</p>
@@ -219,7 +242,7 @@
       </div>
 
       <div class="story-mock reveal">
-        <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable>
+        <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         <div class="story-content">
           <p class="story-label" data-i18n="stories.s3Label">Nouveau au menu</p>
           <p class="story-main" data-i18n="stories.s3Main">Vous l'avez déjà essayé ?</p>
@@ -228,7 +251,7 @@
       </div>
 
       <div class="story-mock reveal">
-        <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable>
+        <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=500&q=80" alt="" data-replaceable loading="lazy" decoding="async" onerror="window.__imgFallback && window.__imgFallback(this)">
         <div class="story-content">
           <p class="story-label" data-i18n="stories.s4Label">Prévu pour le week-end ?</p>
           <p class="story-main" data-i18n="stories.s4Main">Bonne nourriture.<br>Bon café.<br>Bonne compagnie.</p>
@@ -376,12 +399,13 @@
     </p>
   </div>
 </section>
+</main>
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
-      <p class="footer-name">NOVA&nbsp;CONTENT</p>
+      <p class="footer-name">Douf Nin</p>
       <p class="footer-tag" data-i18n="footer.tag">Contenu réseaux sociaux</p>
       <p class="footer-cats" data-i18n="footer.cats">Cafés • Restaurants • Commerces alimentaires</p>
     </div>
@@ -396,9 +420,16 @@
   </div>
 </footer>
 
-<!-- ============ FLOATING WHATSAPP ============ -->
+<!-- ============ WHATSAPP CTA ============ -->
+<!-- Round floating button — tablet & desktop -->
 <a href="https://wa.me/212XXXXXXXXX" class="wa-float" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp" data-replaceable data-i18n-attr="aria-label:wa.ariaLabel">
   <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.31.66 4.47 1.8 6.31L4 29l7.86-1.75A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm0 21.8c-1.93 0-3.73-.55-5.26-1.5l-.376-.23-4.66 1.04 1.03-4.54-.246-.39A9.77 9.77 0 0 1 5.2 15c0-5.96 4.84-10.8 10.8-10.8S26.8 9.04 26.8 15 21.96 24.8 16 24.8zm5.86-8.1c-.32-.16-1.9-.94-2.2-1.05-.29-.11-.51-.16-.72.16-.21.32-.83 1.05-1.02 1.26-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.6-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.53-.54-.72-.55h-.62c-.21 0-.56.08-.85.4-.29.32-1.12 1.1-1.12 2.67s1.15 3.1 1.31 3.31c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.82.67.77.24 1.46.21 2.02.13.62-.09 1.9-.78 2.16-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37z"/></svg>
+</a>
+
+<!-- Full-width sticky bar — mobile only, thumb-friendly -->
+<a href="https://wa.me/212XXXXXXXXX" class="wa-sticky-bar" target="_blank" rel="noopener" data-replaceable>
+  <svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.31.66 4.47 1.8 6.31L4 29l7.86-1.75A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.628 3 16.001 3zm0 21.8c-1.93 0-3.73-.55-5.26-1.5l-.376-.23-4.66 1.04 1.03-4.54-.246-.39A9.77 9.77 0 0 1 5.2 15c0-5.96 4.84-10.8 10.8-10.8S26.8 9.04 26.8 15 21.96 24.8 16 24.8zm5.86-8.1c-.32-.16-1.9-.94-2.2-1.05-.29-.11-.51-.16-.72.16-.21.32-.83 1.05-1.02 1.26-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.6-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.62-.53-.54-.72-.55h-.62c-.21 0-.56.08-.85.4-.29.32-1.12 1.1-1.12 2.67s1.15 3.1 1.31 3.31c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.82.67.77.24 1.46.21 2.02.13.62-.09 1.9-.78 2.16-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37z"/></svg>
+  <span data-i18n="wa.stickyCta">Discuter sur WhatsApp</span>
 </a>
 
 <script src="translations.js"></script>
